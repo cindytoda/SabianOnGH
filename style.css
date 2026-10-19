@@ -1,0 +1,480 @@
+/* ------------------------------
+   BASIC PAGE
+   ------------------------------ */
+
+   /* ==============================
+   FONT SETTINGS
+   Change these to test fonts
+   ============================== */
+
+:root {
+    --title-font: Georgia, "Times New Roman", serif;
+    --body-font: Georgia, "Times New Roman", serif;
+    --headline-font: Georgia, "Times New Roman", serif;
+    --phrase-font: Georgia, "Times New Roman", serif;
+    --article-font: Georgia, "Times New Roman", serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    background: #ffffff;
+    color: #111111;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+
+/* ------------------------------
+   NEWSPAPER HEADER
+   ------------------------------ */
+
+.newspaper-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    border-bottom: 3px solid #111111;
+    padding-bottom: 10px;
+}
+
+.title-area {
+    text-align: center;
+}
+
+.title-area h1 {
+    margin: 0;
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-size: clamp(42px, 7vw, 88px);
+    font-weight: 700;
+    line-height: 1;
+}
+
+.location {
+    margin-top: 8px;
+    font-size: 16px;
+    letter-spacing: 3px;
+}
+
+.search-link,
+.about {
+    position: absolute;
+    top: 8px;
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+.search-link {
+    left: 14%;
+    border: 1px solid #111;
+    padding: 8px 12px;
+    text-align: center;
+}
+
+.about {
+    right: 14%;
+    text-align: right;
+}
+
+.search-link a,
+.about a {
+    color: #111111;
+    text-decoration: none;
+}
+
+.search-link a:hover,
+.about a:hover {
+    text-decoration: underline;
+}
+
+.header-line {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    padding-top: 8px;
+    border-top: 1px solid #111111;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+
+/* ------------------------------
+   DAILY INFORMATION
+   ------------------------------ */
+
+.daily-information {
+    max-width: 1200px;
+    margin: 20px auto;
+    text-align: left;
+    font-size: 18px;
+    font-family: var(--body-font);
+}
+
+.daily-information h2 {
+    color: #111;
+}
+
+#solar-degree {
+    color: darkblue;
+}
+
+.daily-information p {
+    margin: 6px 0;
+}
+
+
+/* ------------------------------
+   MAIN CONTENT
+   ------------------------------ */
+
+.content-area {
+    max-width: 1200px;
+    margin: 25px auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 35px;
+}
+
+.phrase-column {
+    min-width: 0;
+}
+
+.phrase-area {
+    min-height: 300px;
+    border-top: 2px solid #111111;
+    border-bottom: 2px solid #111111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+}
+
+.sabian-phrase {
+    font-size: clamp(28px, 4vw, 52px);
+    font-weight: bold;
+    line-height: 1.25;
+    margin: 0;
+    font-family: var(--phrase-font);
+}
+
+/* Both symbol boxes */
+.symbol-box {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 25px;
+    border: 2px solid #111;
+    overflow: auto;
+}
+
+/* Today's Sun Symbol: white background */
+.sun-symbol {
+    background: white;
+    color: #111;
+}
+
+/* Polar Opposite: black background */
+.opposite-symbol {
+    background: black;
+    color: white;
+    margin-top: 0;
+}
+
+/* Symbol headings */
+.symbol-box h2 {
+    font-size: 20px;
+    margin: 0 0 12px;
+}
+
+.symbol-box h3 {
+    font-size: 22px;
+    margin: 0 0 20px;
+}
+
+/* Sabian phrases */
+.symbol-box .sabian-phrase {
+    font-size: clamp(24px, 3vw, 38px);
+    font-weight: bold;
+    line-height: 1.3;
+    margin: 0;
+}
+
+/* Today's Sun heading above the white box */
+#sun-symbol-title {
+    text-align: left;
+    font-size: 24px;
+    margin: 0 0 15px;
+    color: #111;
+}
+
+/* Degree and sign within the Sun heading */
+#sun-symbol-degree {
+    color: darkblue;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+/* Opposite information aligned at the top-left */
+.opposite-symbol {
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.opposite-symbol h2,
+.opposite-symbol h3 {
+    text-align: left;
+    margin-top: 0;
+}
+
+/* Keep the opposite phrase centered in the black box */
+.opposite-symbol .sabian-phrase {
+    align-self: center;
+    text-align: center;
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.article {
+    border-left: 1px solid #111111;
+    padding-left: 25px;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: var(--article-font);
+}
+
+.article h2 {
+    margin-top: 0;
+    font-size: 24px;
+    font-family: var(--headline-font);
+}
+
+
+/* ------------------------------
+   DAY NAVIGATION
+   ------------------------------ */
+
+.day-navigation {
+    margin: 25px auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.day-navigation button {
+    width: 45px;
+    height: 45px;
+    font-size: 25px;
+    background: white;
+    border: 1px solid #111111;
+    cursor: pointer;
+}
+
+.day-navigation button:hover {
+    background: #eeeeee;
+}
+/* Sun heading above the white box */
+#sun-symbol-title {
+    text-align: left;
+    font-size: clamp(24px, 3vw, 38px);
+    margin: 35px 0;
+    color: #111;
+}
+
+#sun-symbol-degree {
+    color: darkblue;
+}
+
+/* Opposite heading at the top-left of the black box */
+#opposite-symbol-title {
+    text-align: left;
+    font-size: 20px;
+    margin: 0;
+    color: white;
+    white-space: nowrap;
+}
+
+#opposite-symbol-degree {
+    color: white;
+    font-size: inherit;
+}
+
+/* Align search page with newspaper header */
+.search-page {
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+/* HOME link on the search page */
+.search-link a {
+    color: #111;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.search-link a:hover {
+    text-decoration: underline;
+}
+
+/* =====================================
+   SEARCH PAGE: PLANETARY LAYOUT
+   ===================================== */
+
+.search-main-area {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 20px;
+    align-items: start;
+    margin-top: 25px;
+}
+
+/* Left column: planetary positions */
+.planetary-positions {
+    padding: 15px;
+    border-right: 1px solid #111;
+}
+
+.planetary-positions h2 {
+    font-size: 22px;
+    margin-top: 0;
+    text-align: center;
+}
+
+/* Right column: selected symbol */
+.selected-symbol h2 {
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.selected-symbol .symbol-box {
+    margin-bottom: 0;
+}
+
+/* Divider below the planetary section */
+.planetary-divider {
+    border: 0;
+    border-top: 1px solid #111;
+    margin: 25px 0;
+}
+
+/* Search options below the divider */
+.search-options {
+    margin-top: 20px;
+}
+
+.search-options > h1,
+.search-options > .search-intro {
+    text-align: center;
+}
+
+/* Stack the columns on smaller screens */
+@media (max-width: 700px) {
+    .search-main-area {
+        grid-template-columns: 1fr;
+    }
+
+    .planetary-positions {
+        border-right: none;
+        border-bottom: 1px solid #111;
+        padding-bottom: 20px;
+    }
+}
+
+/* Planetary positions list */
+
+#planet-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 15px;
+}
+
+.planet-link {
+    display: flex;
+    justify-content: flex-start;
+    gap: 12px;
+    align-items: center;
+    width: 100%;
+    padding: 8px 5px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background: white;
+    color: #111;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.planet-link:hover {
+    background: #f2f2f2;
+}
+
+.planet-link span {
+    color: #000080;
+    font-weight: bold;
+}
+
+/* Blue zodiac degree on the selected planet heading */
+.zodiac-degree {
+    color: darkblue;
+}
+/* ------------------------------
+   PHONE / TABLET
+   ------------------------------ */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 12px;
+    }
+
+    .search-link,
+    .about {
+        position: static;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .title-image {
+    width: min(571px, 80%);
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    }
+
+    .header-line {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+
+    .content-area {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .article {
+        border-left: none;
+        border-top: 1px solid #111111;
+        padding-left: 0;
+        padding-top: 20px;
+    }
+
+    .phrase-area {
+        min-height: 250px;
+        padding: 25px;
+    }
+    
+
+}

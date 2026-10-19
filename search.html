@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Search Sabian Symbols | Daily Sabian Sun</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Newspaper Header -->
+    <header class="newspaper-header search-header">
+
+        <div class="search-link">
+            <a href="index.html">HOME</a>
+        </div>
+
+        <div class="title-area">
+            <a href="index.html">
+                <img src="title.jpg" alt="Daily Sabian Sun" class="title-image">
+            </a>
+        </div>
+
+        <div class="about">ABOUT<br>
+            <a href="#">What are the<br>Sabian Symbols?</a>
+        </div>
+
+        <div class="header-line">
+            <span>SEARCH THE SYMBOLS</span>
+            <span id="visitor-location">Loading location...</span>
+            <span>PAGE 2</span>
+        </div>
+
+    </header>
+
+    <!-- Search Page -->
+    <main class="search-page">
+
+    <!-- TOP SECTION: PLANETS AND SELECTED SYMBOL -->
+    <section class="search-main-area">
+
+        <!-- LEFT COLUMN: PLANETARY POSITIONS -->
+        <section class="planetary-positions">
+            <h2>Today's Planetary Positions</h2>
+
+            <div id="planet-list">
+
+                <button class="planet-link" data-planet="Sun">
+                    ☉ Sun — <span>Loading...</span>
+                </button>
+
+                <button class="planet-link" data-planet="Moon">
+                    ☽ Moon — <span>Loading...</span>
+                </button>
+
+                <button class="planet-link" data-planet="Mercury">
+                    ☿ Mercury — <span>Loading...</span>
+                </button>
+
+                <button class="planet-link" data-planet="Venus">
+                    ♀ Venus — <span>Loading...</span>
+                </button>
+
+                <button class="planet-link" data-planet="Mars">
+                    ♂ Mars — <span>Loading...</span>
+                </button>
+
+                <button class="planet-link" data-planet="Jupiter">
+                    ♃ Jupiter — <span>Loading...</span>
+                </button>
+
+                <button class="planet-link" data-planet="Saturn">
+                    ♄ Saturn — <span>Loading...</span>
+                </button>
+
+                <button class="planet-link" data-planet="Uranus">
+                    ♅ Uranus — <span>Loading...</span>
+                </button>
+
+                <button class="planet-link" data-planet="Neptune">
+                    ♆ Neptune — <span>Loading...</span>
+                </button>
+
+                <button class="planet-link" data-planet="Pluto">
+                    ♇ Pluto — <span>Loading...</span>
+                </button>
+
+            </div>
+        </section>
+
+        <!-- RIGHT COLUMN: SELECTED PLANET'S SYMBOL -->
+        <section class="selected-symbol">
+
+            <h2 id="selected-planet-title">Moon's Sabian Symbol</h2>
+
+            <div class="symbol-box sun-symbol">
+                <p id="selected-symbol-phrase" class="sabian-phrase"></p>
+            </div>
+
+            <div class="symbol-box opposite-symbol">
+                <h2 id="selected-opposite-degree">Polar Opposite</h2>
+                <p id="selected-opposite-phrase" class="sabian-phrase"></p>
+            </div>
+
+        </section>
+
+    </section>
+
+    <!-- DIVIDER -->
+    <hr class="planetary-divider">
+
+    <!-- EXISTING SEARCH OPTIONS -->
+    <section class="search-options">
+
+        <h1>Search the Sabian Symbols</h1>
+
+        <p class="search-intro">
+            Explore the Sabian Symbols by date or zodiac degree.
+        </p>
+
+        <!-- Search by Date -->
+        <section class="search-section">
+
+            <h2>Search by Date</h2>
+
+            <p>
+                Select a date to discover the Sun's Sabian Symbol
+                for that day.
+            </p>
+
+            <form id="date-search-form">
+
+                <label for="search-date">Select a date:</label>
+
+                <input type="date" id="search-date" required>
+
+                <button type="submit">Find Symbol</button>
+
+            </form>
+
+        </section>
+
+        <div class="search-divider">
+            OR
+        </div>
+
+        <!-- Search by Zodiac Degree -->
+        <section class="search-section">
+
+            <h2>Search by Zodiac Degree</h2>
+
+            <p>
+                Select a zodiac sign and degree to look up its
+                Sabian Symbol and polar opposite.
+            </p>
+
+            <form id="degree-search-form">
+
+                <label for="search-sign">Zodiac Sign:</label>
+
+                <select id="search-sign" required>
+                    <option value="">Select a sign</option>
+                    <option value="Aries">Aries</option>
+                    <option value="Taurus">Taurus</option>
+                    <option value="Gemini">Gemini</option>
+                    <option value="Cancer">Cancer</option>
+                    <option value="Leo">Leo</option>
+                    <option value="Virgo">Virgo</option>
+                    <option value="Libra">Libra</option>
+                    <option value="Scorpio">Scorpio</option>
+                    <option value="Sagittarius">Sagittarius</option>
+                    <option value="Capricorn">Capricorn</option>
+                    <option value="Aquarius">Aquarius</option>
+                    <option value="Pisces">Pisces</option>
+                </select>
+
+                <label for="search-degree">Degree:</label>
+
+                <select id="search-degree" required>
+                    <option value="">Select a degree</option>
+                </select>
+
+                <button type="submit">Find Symbol</button>
+
+            </form>
+
+        </section>
+
+        <!-- EXISTING SEARCH RESULTS -->
+        <section id="search-results" class="search-results" hidden>
+
+            <h2>Search Results</h2>
+
+            <h3 id="result-sun-degree"></h3>
+
+            <div class="symbol-box sun-symbol">
+                <p id="result-sun-phrase" class="sabian-phrase"></p>
+            </div>
+
+            <div class="symbol-box opposite-symbol">
+                <h2 id="result-opposite-degree"></h2>
+                <p id="result-opposite-phrase" class="sabian-phrase"></p>
+            </div>
+
+        </section>
+
+    </section>
+
+</main>
+
+
+    <script src="symbols.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/astronomy-engine@2.1.19/astronomy.browser.min.js"></script>
+    <script src="script.js"></script>
+    <script src="search.js"></script>
+
+</body>
+</html>

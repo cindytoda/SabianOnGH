@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Daily Sabian Sun</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="newspaper-header">
+
+        <div class="search-link">
+            <a href="search.html" class="search-button">
+                Click here to search by date or degree
+            </a>
+        </div>
+
+        <div class="title-area">
+            <img src="title.jpg" alt="Daily Sabian Sun" class="title-image">
+        </div>
+
+        <div class="about">
+            ABOUT<br>
+            <a href="#">What are the<br>Sabian Symbols?</a>
+        </div>
+
+        <div class="header-line">
+            <span id="header-date"></span>
+            <span id="visitor-location">VISITOR LOCATION</span>
+            <span>Page 1</span>
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <section class="daily-information">
+            <h2 id="sun-symbol-title">Today's Sun Symbol: <span id="sun-symbol-degree"></span>
+            </h2>
+
+        </section>
+
+
+        <section class="content-area">
+
+            <div class="phrase-column">
+
+                <!-- Today's Sun Symbol -->
+                <section class="symbol-box sun-symbol">
+                    <p id="sun-symbol-phrase" class="sabian-phrase"></p>
+                </section>
+
+                <!-- Polar Opposite Symbol -->
+                <section class="symbol-box opposite-symbol">
+                    <h2 id="opposite-symbol-title">Polar Opposite: <span id="opposite-symbol-degree"></span></h2>
+
+                    <p id="opposite-symbol-phrase" class="sabian-phrase"></p>
+                </section>
+
+                <!-- Day Navigation -->
+                <nav class="day-navigation">
+                    <button type="button" id="previous-day" aria-label="Previous day">←</button>
+                    <span>SEARCH</span>
+                    <button type="button" id="next-day" aria-label="Next day">→</button>
+                </nav>
+
+            </div>
+
+            <aside class="article">
+                <h2>What exactly are the Sabian Symbols?</h2>
+                <p>
+                    Your article about the Sabian Symbols will go here.
+                </p>
+            </aside>
+
+        </section>
+
+    </main>
+
+    <script src="symbols.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
