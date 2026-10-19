@@ -216,3 +216,14 @@ if (moonButton) {
     moonButton.click();
 }
 getVisitorLocation();
+
+// Display today's date in the header
+const searchDateElement = document.getElementById("search-date");
+
+if (searchDateElement) {
+    searchDateElement.textContent = new Date().toLocaleDateString("en-US", {
+        month: "long",
+        day: "numeric",
+        year: "numeric"
+    }).toUpperCase();
+}
